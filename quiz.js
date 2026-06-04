@@ -361,7 +361,7 @@ function showQuestion(index) {
     choicesContainer.innerHTML = '';
     const selectedAnswerText = userAnswers[index];
     
-    q.options.forEach((opt) => {
+    q.options.forEach((opt, optIdx) => {
         const isSelected = selectedAnswerText === opt.text;
         
         const optionEl = document.createElement('div');
@@ -371,7 +371,7 @@ function showQuestion(index) {
             <div class="choice-radio-circle">
                 <div class="choice-radio-dot"></div>
             </div>
-            <div class="choice-label-badge">${opt.label}</div>
+            <div class="choice-label-badge">${String.fromCharCode(65 + optIdx)}</div>
             <div class="choice-text">${opt.text}</div>
         `;
         
@@ -544,7 +544,7 @@ function renderReviewList() {
         card.className = cardClass;
         
         let choicesHtml = '';
-        q.options.forEach(opt => {
+        q.options.forEach((opt, optIdx) => {
             let optClass = 'review-choice ';
             let optIcon = '<div class="review-choice-icon"></div>';
             
@@ -566,7 +566,7 @@ function renderReviewList() {
             choicesHtml += `
                 <div class="${optClass}">
                     ${optIcon}
-                    <span class="choice-label-badge">${opt.label}</span>
+                    <span class="choice-label-badge">${String.fromCharCode(65 + optIdx)}</span>
                     <span class="choice-text">${opt.text}</span>
                 </div>
             `;
