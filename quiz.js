@@ -51,6 +51,9 @@ const resultsView = document.getElementById('results-view');
 
 const questionsInput = document.getElementById('questions-input');
 const loadSampleBtn = document.getElementById('load-sample-btn');
+const loadFileQuizBtn = document.getElementById('load-file-quiz-btn');
+const uploadFileBtn = document.getElementById('upload-file-btn');
+const fileInputUploader = document.getElementById('file-input-uploader');
 const startQuizBtn = document.getElementById('start-quiz-btn');
 const shuffleQuestionsCheckbox = document.getElementById('shuffle-questions');
 const shuffleOptionsCheckbox = document.getElementById('shuffle-options');
@@ -109,7 +112,7 @@ themeToggleBtn.addEventListener('click', () => {
 
 // --- PARSER LOGIC ---
 function parseQuestions(text) {
-    const lines = text.split('\n');
+    const lines = text.split(/\r?\n/);
     const parsed = [];
     let currentQuestion = null;
     
@@ -256,6 +259,15 @@ function initQuiz() {
         quizQuestions.forEach(q => {
             shuffle(q.options);
         });
+    }
+    
+    // Áp dụng giới hạn số lượng câu hỏi làm bài
+    const limitVal = document.getElementById('question-limit').value;
+    if (limitVal !== 'all') {
+        const limit = parseInt(limitVal, 10);
+        if (quizQuestions.length > limit) {
+            quizQuestions = quizQuestions.slice(0, limit);
+        }
     }
     
     // Render sidebar lưới câu hỏi
@@ -590,8 +602,69 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // --- ACTION BUTTONS EVENTS ---
+// Hàm nạp tệp quiz.txt có sẵn
+function fetchQuizFile() {
+    fetch('quiz.txt?t=' + Date.now())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Không tìm thấy tệp quiz.txt trong cùng thư mục dự án.');
+            }
+            return response.text();
+        })
+        .then(data => {
+            questionsInput.value = data;
+        })
+        .catch(error => {
+            console.warn(error.message);
+            // Nếu chạy trực tiếp qua giao thức file://
+            if (window.location.protocol === 'file:') {
+                console.log('Bảo mật trình duyệt chặn fetch trên file://. Cần sử dụng công cụ Chọn file hoặc chạy localhost.');
+            }
+        });
+}
+
+// Bấm nút tự động tải tệp quiz.txt
+loadFileQuizBtn.addEventListener('click', () => {
+    fetch('quiz.txt?t=' + Date.now())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Không tìm thấy tệp quiz.txt trong thư mục dự án.');
+            }
+            return response.text();
+        })
+        .then(data => {
+            questionsInput.value = data;
+            alert('Đã nạp thành công bộ câu hỏi từ tệp quiz.txt!');
+        })
+        .catch(error => {
+            alert('Lỗi nạp tệp: ' + error.message + '\n\nNếu đang mở file index.html trực tiếp (file://), trình duyệt sẽ chặn tải file vì lý do bảo mật. Vui lòng bấm nút "Chọn file từ máy" để tải tệp thủ công.');
+        });
+});
+
+// Bấm nút tải file tùy chọn từ máy
+uploadFileBtn.addEventListener('click', () => {
+    fileInputUploader.click();
+});
+
+// Sự kiện khi chọn file từ máy tính
+fileInputUploader.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+        questionsInput.value = evt.target.result;
+        alert(`Đã nạp thành công bộ câu hỏi từ tệp: ${file.name}`);
+    };
+    reader.onerror = () => {
+        alert('Không thể đọc tệp. Vui lòng thử lại.');
+    };
+    reader.readAsText(file, 'UTF-8');
+});
+
 loadSampleBtn.addEventListener('click', () => {
     questionsInput.value = SAMPLE_QUESTIONS;
+    alert('Đã tải bộ câu hỏi mẫu!');
 });
 
 startQuizBtn.addEventListener('click', initQuiz);
@@ -620,5 +693,5 @@ newQuizBtn.addEventListener('click', () => {
 
 // --- INIT APP ---
 initTheme();
-// Tải trước bộ câu hỏi mẫu vào textarea để giao diện ban đầu trực quan hơn
-questionsInput.value = SAMPLE_QUESTIONS;
+// Tự động tải trước tệp quiz.txt nếu có sẵn khi mở trang
+fetchQuizFile();

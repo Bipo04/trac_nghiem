@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="quiz.css?v=3">
+    <link rel="stylesheet" href="quiz.css?v=4">
 </head>
 <body>
     <!-- Theme Toggle Floating Button -->
@@ -54,6 +54,15 @@
                             <label for="candidate-id" class="input-label">Mã số sinh viên </label>
                             <input type="text" id="candidate-id" class="text-input" placeholder="Ví dụ: 20225334" value="20225334">
                         </div>
+                        <div class="input-group">
+                            <label for="question-limit" class="input-label">Số lượng câu hỏi làm bài</label>
+                            <select id="question-limit" class="text-input" style="height: 46px; padding: 10px 16px; background-color: var(--bg-input); color: var(--text-main); cursor: pointer;">
+                                <option value="all">Tất cả câu hỏi</option>
+                                <option value="30">Làm 30 câu</option>
+                                <option value="50">Làm 50 câu</option>
+                                <option value="100">Làm 100 câu</option>
+                            </select>
+                        </div>
 
                         <!-- Quiz Configurations -->
                         <div class="config-options">
@@ -89,17 +98,27 @@
 
                     <!-- Right panel: Input Area -->
                     <div class="setup-card input-card">
-                        <div class="card-header-flex">
-                            <h2 class="card-title">
+                        <div class="card-header-flex" style="flex-wrap: wrap; gap: 10px;">
+                            <h2 class="card-title" style="margin-bottom: 0;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
                                 Nhập bộ câu hỏi
                             </h2>
-                            <button id="load-sample-btn" class="secondary-btn btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 5 5-8 8H7v-3l8-8z"></path><path d="M9 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"></path></svg>
-                                Tải bộ câu hỏi mẫu
-                            </button>
+                            <div class="header-buttons-group" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <button id="load-file-quiz-btn" class="primary-btn btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    Nạp file quiz.txt
+                                </button>
+                                <button id="upload-file-btn" class="secondary-btn btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                                    Chọn file từ máy
+                                </button>
+                                <input type="file" id="file-input-uploader" style="display: none;" accept=".txt">
+                                <button id="load-sample-btn" class="secondary-btn btn-sm">
+                                    Mẫu
+                                </button>
+                            </div>
                         </div>
-                        <textarea id="questions-input" class="textarea-input" placeholder="Dán nội dung câu hỏi tại đây..."></textarea>
+                        <textarea id="questions-input" class="textarea-input" placeholder="Nội dung tệp câu hỏi sẽ được tải tại đây..."></textarea>
                         
                         <div class="setup-actions">
                             <button id="start-quiz-btn" class="primary-btn btn-lg">
@@ -290,6 +309,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="quiz.js"></script>
+    <script src="quiz.js?v=4"></script>
 </body>
 </html>
