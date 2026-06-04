@@ -13,8 +13,8 @@ D. Khuyến mãi mua nhiều tặng nhiều
 Câu 3. Nhãn sinh thái là
 A. Một loại thuế cho hàng nhập khẩu
 B. Biện pháp pháp lý hạn chế phát thải
-$C. Ký hiệu gắn cho các sản phẩm thân thiện môi trường
-D. Chứng nhận dành riêng cho doanh nghiệp công nghiệp có sản phẩm thân thiện với môi trường
+C. Ký hiệu gắn cho các sản phẩm thân thiện môi trường
+$D. Chứng nhận dành riêng cho doanh nghiệp công nghiệp có sản phẩm thân thiện với môi trường
 
 Câu 4. Tác động tiêu cực của chăn nuôi công nghiệp đến môi trường là gì ?
 A. Giảm tỉ lệ sử dụng đất ở vùng sản xuất chính
@@ -433,8 +433,8 @@ D. Sự phản đối mạnh mẽ từ các tổ chức phi chính phủ về m�
 Câu 73: Trong quản lý chất thải rắn sinh hoạt, phương pháp xử lý nào được xem là ít gây ô nhiễm môi trường nhất và có khả năng thu hồi năng lượng?
 A. Chôn lấp hợp vệ sinh
 B. Đốt lộ thiên
-$C. Đốt chất thải có kiểm soát và thu hồi năng lượng (đốt rác phát điện)
-D. Ủ phân compost quy mô nhỏ tại hộ gia đình
+C. Đốt chất thải có kiểm soát và thu hồi năng lượng (đốt rác phát điện)
+$D. Ủ phân compost quy mô nhỏ tại hộ gia đình
 
 Câu 74: “Vết chân sinh thái” (Ecological Footprint) là một chỉ số được sử dụng để đo lường điều gì?
 A. Mức độ ô nhiễm môi trường do hoạt động sản xuất của một quốc gia.
@@ -556,10 +556,10 @@ C. Bảo vệ môi trường chỉ là ưu tiên thứ yếu so với mục tiê
 D. Chỉ cần tập trung vào tăng trưởng kinh tế, môi trường sẽ tự khắc được cải thiện.
 
 Câu 94: Trong một hệ sinh thái rừng mưa nhiệt đới, loài nào sau đây đóng vai trò quan trọng nhất trong việc duy trì chu trình dinh dưỡng và năng lượng?
-A. Thực vật (cây xanh)
+$A. Thực vật (cây xanh)
 B. Động vật ăn cỏ
 C. Động vật ăn thịt
-$D. Vi sinh vật phân hủy
+D. Vi sinh vật phân hủy
 
 Câu 96: Nhà máy nhiệt điện than gây ra loại ô nhiễm không khí nào nghiêm trọng nhất?
 A. Ô nhiễm tiếng ồn
@@ -850,16 +850,16 @@ C. 20%
 D. 25%
 
 Câu 144. Nước nào phát thải ra khí nhà kính nhiều nhất thế giới
-A. Mĩ
-$B. Trung Quốc
+$A. Mĩ
+B. Trung Quốc
 C. Nga
 D. Úc
 
 Câu 145. Nồng độ Ozone lớn nhất trong tầng bình lưu là:
 A. 1ppm
-$B. 3ppm
+B. 3ppm
 C. 5ppm
-D. 7ppm
+$D. 7ppm
 
 Câu 146: Hoạt động nào của con người làm giảm lượng phát thải nhà kính
 A. Tàn phá rừng
@@ -886,8 +886,8 @@ $C. pH < 5.6
 D. pH < 6.6
 
 Câu 150. Độ cao của tầng đối lưu là bao nhiêu?
-A. 0 – 10km
-$B. 0 – 15km
+$A. 0 – 10km
+B. 0 – 15km
 C. 0 – 20km
 D. 0 – 25km
 
@@ -911,8 +911,8 @@ D. Ba câu A, B và C đều sai
 
 Câu 154. Độ cao của tầng trung lưu là bao nhiêu?
 A. 50 – 100km
-B. 20 – 180km
-$C. 50 – 90km
+$B. 20 – 180km
+C. 50 – 90km
 D. 30 – 250km
 
 Câu 155. Độ cao của tầng nhiệt là bao nhiêu?
@@ -928,8 +928,8 @@ C. Ở vùng xích đạo Trái Đất và vào mùa hè
 D. Ở vùng xích đạo Trái Đất và vào mùa đông
 
 Câu 157. Độ cao của tầng không gian là bao nhiêu?
-A. >500km
-$B. >1000km
+$A. >500km
+B. >1000km
 C. >1500km
 D. >2000km
 
@@ -1012,8 +1012,8 @@ C. Quan trắc môi trường
 D. Đề án bảo vệ môi trường
 
 Câu 171. Nguyên nhân thu hẹp diện tích rừng ở Việt Nam:
-$A. Đốt nương làm rẫy – Khai thác củi gỗ - Phát triển cơ sở hạ tầng – Cháy rừng
-B. Lấy đất làm nông nghiệp – Khai thác củi gỗ - Xây dựng, giao thông – Chiến tranh
+A. Đốt nương làm rẫy – Khai thác củi gỗ - Phát triển cơ sở hạ tầng – Cháy rừng
+$B. Lấy đất làm nông nghiệp – Khai thác củi gỗ - Xây dựng, giao thông – Chiến tranh
 C. Khai thác quá mức – Mở mang đô thị - Ô nhiễm môi trường – Cháy rừng
 D. Chuyển đổi cơ cấu nông nghiệp – Xây dựng cơ sở hạ tầng – Cháy rừng – Chiến tranh
 
@@ -1038,8 +1038,8 @@ D. Là lớp ngoài cùng của thạch quyển bị biến đổi dưới tác 
 Câu 175. Vai trò quan trọng nhất của rừng là:
 A. Bảo vệ đất
 B. Cung cấp vật liệu
-C. Điều hòa khí hậu
-$D. Bảo vệ đa dạng sinh học
+$C. Điều hòa khí hậu
+D. Bảo vệ đa dạng sinh học
 
 Câu 176. Phát triển bền vững cần chú trọng đến các yếu tố:
 A. Tăng trưởng kinh tế, tiến bộ, công bằng xã hội
@@ -1108,10 +1108,10 @@ C. Công ước IAEA
 D. Công ước Ramsar
 
 Câu 187. Để phát triển bền vững tài nguyên rừng cần thực hiện:
-$A. Trồng và bảo vệ rừng – Xóa đói giảm nghèo – Chống du canh du cư – Hợp tác quốc tế
+A. Trồng và bảo vệ rừng – Xóa đói giảm nghèo – Chống du canh du cư – Hợp tác quốc tế
 B. Phát triển kinh tế - Phát triển cộng đồng địa phương có rừng – Hỗ trợ tài chính cho dân cư nghèo
 C. Thay đổi ý thức tiêu thụ sản phẩm rừng – Chống du canh du cư – Phát triển kinh tế địa phương
-D. Trồng và bảo vệ rừng – Thay đổi ý thức tiêu thụ sản phẩm – Xóa đói giảm nghèo – Hợp tác quốc tế
+$D. Trồng và bảo vệ rừng – Thay đổi ý thức tiêu thụ sản phẩm – Xóa đói giảm nghèo – Hợp tác quốc tế
 
 Câu 188. Chọn phát biểu đúng về Phát triển bền vững:
 A. Phát triển bền vững là sự phát triển nhằm đáp ứng các yêu cầu của hiện tại
@@ -1139,21 +1139,21 @@ D. Chu trình lưu huỳnh
 
 Câu 193. Việc đúc ép các chất thải công nghiệp làm vật liệu xây dựng thuộc phương pháp sử lí chất thải rắn nào ?
 A. Phương pháp cơ học
-$B. Phương pháp cơ lí
-C. Phương pháp sinh học
+B. Phương pháp cơ lí
+$C. Phương pháp sinh học
 D. Không thuộc phương pháp nào
 
 Câu 194. Theo QCVN 07:2009/BTNMT thì chất thải nguy hại có tính kiềm khi
 A. pH>=7
-C. pH>=10
-$B. ph>=12,5
+B. ph>=12,5
+$C. pH>=10
 D. pH>=8
 
 Câu 195. Sắp xếp nguyên lý quản lý chất thải theo hướng lựa chọn từ thấp đến cao:
 A. Ngăn ngừa – tái sử dụng – giảm thiểu – tái chế – thu hồi – thải bỏ
-$B. Thải bỏ – thu hồi – tái chế – tái sử dụng – giảm thiểu – ngăn ngừa
+B. Thải bỏ – thu hồi – tái chế – tái sử dụng – giảm thiểu – ngăn ngừa
 C. Thải bỏ – tái chế – tái sử dụng – thu hồi – giảm thiểu – ngăn ngừa
-D. Ngăn ngừa – giảm thiểu – tái sử dụng – tái chế – thu hồi
+$D. Ngăn ngừa – giảm thiểu – tái sử dụng – tái chế – thu hồi
 
 Câu 196. Thành phần nước trên trái đất bao gồm
 A. 91% nước mặn, 2% nước dạng băng, 7%nước ngọt
@@ -1175,9 +1175,9 @@ $D. cả 3 đáp án trên
 
 Câu 199. Khả năng tự làm sạch của nguồn nước phụ thuộc vào:
 A. Quá trình xáo trộn
-B. Quá trình khoáng hóa
+$B. Quá trình khoáng hóa
 C. Quá trình lắng đọng
-$D. Cả 3 đáp án trên
+D. Cả 3 đáp án trên
 
 Câu 200. Các tác nhân hóa học gây ô nhiễm môi trường nước không bao gồm:
 A. Kim loại nặng
