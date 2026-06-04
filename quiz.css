@@ -599,7 +599,7 @@ body {
 
 .questions-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
     gap: 8px;
     max-height: 250px;
     overflow-y: auto;
@@ -618,6 +618,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
+}
+.grid-btn:focus {
+    outline: none;
 }
 .grid-btn:hover {
     border-color: var(--primary);
@@ -1164,14 +1168,51 @@ body {
 @media (max-width: 992px) {
     .setup-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .quiz-layout {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
+    /* Giao diện cho iPad/Tablet: Bố cục Sidebar chia làm 2 cột bằng Grid Areas */
     .quiz-sidebar {
         position: static;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        grid-template-areas: 
+            "profile grid"
+            "timer grid"
+            "actions legend";
+        gap: 16px;
+        align-items: start;
+    }
+    
+    .sidebar-profile-card {
+        grid-area: profile;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    .timer-box-widget {
+        grid-area: timer;
+    }
+    
+    .nav-grid-container {
+        grid-area: grid;
+    }
+    
+    .grid-legend {
+        grid-area: legend;
+        border-top: none;
+        padding-top: 0;
+        margin-top: 4px;
+    }
+    
+    .sidebar-actions {
+        grid-area: actions;
+        margin-top: 0;
     }
     
     .results-summary-card {
@@ -1180,6 +1221,29 @@ body {
         text-align: center;
         gap: 24px;
     }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+    
+    /* Làm nhỏ các ô câu hỏi trên iPad */
+    .questions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+        gap: 6px;
+    }
+    .grid-btn {
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Điều chỉnh nhẹ cho tablet nhỏ */
+    .quiz-sidebar {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1190,8 +1254,63 @@ body {
         padding: 12px;
     }
     
+    .app-header {
+        margin-bottom: 20px;
+    }
+    
     .logo-text h1 {
         font-size: 1.25rem;
+    }
+    
+    /* Giao diện cho điện thoại: sidebar thu gọn tối giản */
+    .quiz-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .sidebar-profile-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .timer-box-widget {
+        padding: 10px 14px;
+    }
+    
+    /* Làm nhỏ hơn nữa các ô câu hỏi trên điện thoại */
+    .questions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+        gap: 6px;
+        max-height: 160px;
+    }
+    .grid-btn {
+        font-size: 0.75rem;
+        border-radius: 5px;
+    }
+    
+    .grid-legend {
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--border-color);
+        padding-top: 10px;
+    }
+    
+    .sidebar-actions {
+        display: flex;
+        flex-direction: row; /* Nút Nộp bài và Quay lại nằm ngang để tiết kiệm chiều cao */
+        gap: 10px;
+        margin-top: 5px;
+    }
+    
+    .sidebar-actions .primary-btn, 
+    .sidebar-actions .secondary-btn {
+        flex: 1;
+        padding: 10px;
+        font-size: 0.85rem;
     }
     
     .question-card {
@@ -1204,30 +1323,34 @@ body {
     
     .choice-option {
         padding: 12px 14px;
+        gap: 12px;
     }
     
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .choice-text {
+        font-size: 0.9rem;
     }
     
     .results-summary-card {
-        padding: 24px;
+        padding: 24px 16px;
     }
     
     .review-filters {
         width: 100%;
         justify-content: space-between;
     }
+    
     .filter-btn {
         padding: 8px 10px;
         flex-grow: 1;
         text-align: center;
+        font-size: 0.75rem;
     }
     
     .result-actions {
         flex-direction: column;
         width: 100%;
     }
+    
     .result-actions button {
         width: 100%;
     }
